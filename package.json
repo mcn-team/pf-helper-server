@@ -1,0 +1,22 @@
+{
+  "name": "pf-helper-server",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcn-team/pf-helper-server.git"
+  },
+  "author": "MCN-Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcn-team/pf-helper-server/issues"
+  },
+  "homepage": "https://github.com/mcn-team/pf-helper-server#readme",
+  "dependencies": {
+    "hapi": "17.4.0"
+  }
+}
