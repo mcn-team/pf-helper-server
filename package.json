@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"./**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/mcn-team/pf-helper-server#readme",
   "dependencies": {
-    "hapi": "17.4.0"
+    "hapi": "17.4.0",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1"
   }
 }

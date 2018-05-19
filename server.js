@@ -1,11 +1,9 @@
 const Hapi = require('hapi');
 const api = require('./plugins/api');
 const config = require('./config/config.json');
+const log = require('./utils/helpers/log.helpers');
 
-// define some constants to make life easier
-const DEFAULT_HOST = "localhost";
-const DEFAULT_PORT = 3000;
-const RADIX = 10;
+const database = require('./init/database');
 
 // define your server
 const server = Hapi.server({
@@ -15,17 +13,15 @@ const server = Hapi.server({
 });
 
 const myServer = async () => {
+    database.init();
     try {
         await server.register(api);
 
         await server.start();
 
-        console.log(`Hapi server running at ${server.info.uri}`);
-
+        log.info(`Hapi server running at ${server.info.uri}`);
     } catch (err) {
-
-        console.log("Hapi error starting server", err);
-
+        log.error('Hapi error starting server', err);
     }
 };
 
